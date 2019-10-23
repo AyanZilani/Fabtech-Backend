@@ -1,0 +1,32 @@
+{
+  "name": "Broadcast_message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "broadcast_message_id": {
+      "type": "string",
+      "required": true
+    },
+    "broadcast_message_content": {
+      "type": "string",
+      "required": true
+    },
+    "broadcast_message_datetime": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "fa_id": {
+      "type": "belongsTo",
+      "model": "Fabtech_admin",
+      "foreignKey": "fa_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Type_of_services",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "required": true
+    },
+    "service_name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Daily_timesheet",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dt_id": {
+      "type": "string",
+      "required": true
+    },
+    "worker_id": {
+      "type": "string",
+      "required": true
+    },
+    "dtd_id": {
+      "type": "string",
+      "required": true
+    },
+    "dt_datetime": {
+      "type": "date",
+      "required": true
+    },
+    "attendance": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sv_eng_id": {
+      "type": "belongsTo",
+      "model": "Site_sv_engineer",
+      "foreignKey": "sv_eng_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

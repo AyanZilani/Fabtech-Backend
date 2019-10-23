@@ -1,0 +1,70 @@
+{
+  "name": "List_issues_status",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "issues_id": {
+      "type": "string",
+      "required": true
+    },
+    "issues_title": {
+      "type": "string",
+      "required": true
+    },
+    "issues_datetime": {
+      "type": "date",
+      "required": true
+    },
+    "issues_status": {
+      "type": "string",
+      "required": true
+    },
+    "issues_in": {
+      "type": "string",
+      "required": true
+    },
+    "issues_description": {
+      "type": "string",
+      "required": true
+    },
+    "issues_attachment": {
+      "type": "string",
+      "required": true
+    },
+    "issues_details": {
+      "type": "string",
+      "required": true
+    },
+    "sv_verify": {
+      "type": "string",
+      "required": true
+    },
+    "client_rep_verify": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user_id": {
+      "type": "belongsTo",
+      "model": "FBUser",
+      "foreignKey": "user_id"
+    },
+    "project_id": {
+      "type": "belongsTo",
+      "model": "Project_created",
+      "foreignKey": "project_id"
+    },
+    "sv_eng_id": {
+      "type": "belongsTo",
+      "model": "Site_sv_engineer",
+      "foreignKey": "sv_eng_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

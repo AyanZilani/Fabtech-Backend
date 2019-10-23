@@ -1,0 +1,38 @@
+{
+  "name": "Applicant_application",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "application_id": {
+      "type": "string",
+      "required": true
+    },
+    "application_datetime": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "applicant_id": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    },
+    "job_name": {
+      "type": "belongsTo",
+      "model": "Jobs_available",
+      "foreignKey": "job_name"
+    },
+    "job_id": {
+      "type": "belongsTo",
+      "model": "Jobs_available",
+      "foreignKey": "job_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

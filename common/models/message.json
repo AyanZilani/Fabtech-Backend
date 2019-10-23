@@ -1,0 +1,32 @@
+{
+  "name": "Message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "msg_id": {
+      "type": "string",
+      "required": true
+    },
+    "msg_content": {
+      "type": "string",
+      "required": true
+    },
+    "msg_datetime": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user_id": {
+      "type": "belongsTo",
+      "model": "FBUser",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
