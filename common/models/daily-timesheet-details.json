@@ -1,0 +1,48 @@
+{
+  "name": "Daily_timesheet_details",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dtd_id": {
+      "type": "string",
+      "required": true
+    },
+    "time_in": {
+      "type": "string",
+      "required": true
+    },
+    "time_out": {
+      "type": "string",
+      "required": true
+    },
+    "hours_left": {
+      "type": "string",
+      "required": true
+    },
+    "attachment": {
+      "type": "string",
+      "required": true
+    },
+    "sv_verified": {
+      "type": "string",
+      "required": true
+    },
+    "client_rep_verified": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "dt_id": {
+      "type": "belongsTo",
+      "model": "Daily_timesheet",
+      "foreignKey": "dt_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

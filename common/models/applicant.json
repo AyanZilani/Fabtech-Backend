@@ -1,0 +1,33 @@
+{
+  "name": "Applicant",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "applicant_id": {
+      "type": "string",
+      "required": true
+    },
+    "applicant_name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Applicant": {
+      "type": "belongsTo",
+      "model": "FBUser",
+      "foreignKey": "user_id"
+    },
+    "roleid": {
+      "type": "belongsTo",
+      "model": "Role",
+      "foreignKey": "roleid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

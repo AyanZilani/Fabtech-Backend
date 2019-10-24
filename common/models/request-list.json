@@ -1,0 +1,50 @@
+{
+  "name": "Request_list",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "required": true
+    },
+    "request_detail_id": {
+      "type": "string",
+      "required": true
+    },
+    "request_type": {
+      "type": "string",
+      "required": true
+    },
+    "request_datetime": {
+      "type": "string",
+      "required": true
+    },
+    "request_status": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "project_id": {
+      "type": "belongsTo",
+      "model": "Project_created",
+      "foreignKey": "project_id"
+    },
+    "sv_eng_id": {
+      "type": "belongsTo",
+      "model": "Site_sv_engineer",
+      "foreignKey": "sv_eng_id"
+    },
+    "user_id": {
+      "type": "belongsTo",
+      "model": "FBUser",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

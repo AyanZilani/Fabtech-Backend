@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "fabtech",
+    "password": "FnN6SkdMxlY0omzm",
+    "name": "mysql",
+    "user": "fabtech",
+    "connector": "mysql",
+    "maxOfflineRequests": 200
+  }
+}

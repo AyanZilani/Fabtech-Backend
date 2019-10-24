@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mysql"
+  },
+  "AccessToken": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "mysql",
+    "public": true,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Applicant": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "FBUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Fabtech_admin": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Operational_director": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Broadcast_message": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Applicant_application": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Jobs_available": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Message": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "FBUser_details": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Top_management": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Task_details": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Site_sv_engineer": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Request_list": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Daily_timesheet": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Daily_timesheet_details": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Project_created": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Daily_log_report": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Type_of_services": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Applicant_attachment": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "List_issues_status": {
+    "dataSource": "mysql",
+    "public": true
+  }
+}

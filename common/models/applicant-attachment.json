@@ -1,0 +1,40 @@
+{
+  "name": "Applicant_attachment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "applicant_attachment_id": {
+      "type": "string",
+      "required": true
+    },
+    "job_applied_id": {
+      "type": "string",
+      "required": true
+    },
+    "applicant_attachment_certificate": {
+      "type": "string",
+      "required": true
+    },
+    "applicant_attachment_cv": {
+      "type": "string",
+      "required": true
+    },
+    "applicant_attachment_datetime": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "applicant_id": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

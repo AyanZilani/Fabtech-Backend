@@ -1,0 +1,40 @@
+{
+  "name": "Task_details",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "required": true
+    },
+    "task_title": {
+      "type": "string",
+      "required": true
+    },
+    "task_details": {
+      "type": "string",
+      "required": true
+    },
+    "task_datetime": {
+      "type": "string",
+      "required": true
+    },
+    "task_status": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "top_management_id": {
+      "type": "belongsTo",
+      "model": "Top_management",
+      "foreignKey": "top_management_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

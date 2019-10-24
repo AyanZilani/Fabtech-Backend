@@ -1,0 +1,53 @@
+{
+  "name": "Daily_log_report",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dlr_id": {
+      "type": "string",
+      "required": true
+    },
+    "subcontractor": {
+      "type": "string",
+      "required": true
+    },
+    "equipment": {
+      "type": "string",
+      "required": true
+    },
+    "materials": {
+      "type": "string",
+      "required": true
+    },
+    "attachment": {
+      "type": "string",
+      "required": true
+    },
+    "crew_name": {
+      "type": "string",
+      "required": true
+    },
+    "report_datetime": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "project_id": {
+      "type": "belongsTo",
+      "model": "Project_created",
+      "foreignKey": "project_id"
+    },
+    "sv_eng_id": {
+      "type": "belongsTo",
+      "model": "Site_sv_engineer",
+      "foreignKey": "sv_eng_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
