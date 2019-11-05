@@ -7,34 +7,20 @@
   },
   "properties": {
     "user_details_id": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "user_icno": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "user_phoneno": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "user_address": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "user_email": {
-      "type": "belongsTo",
-      "model": "FBUser",
-      "foreignKey": "user_email"
-    },
-    "user_password": {
-      "type": "belongsTo",
-      "model": "FBUser",
-      "foreignKey": "user_password"
-    },
     "user_id": {
       "type": "belongsTo",
       "model": "FBUser",

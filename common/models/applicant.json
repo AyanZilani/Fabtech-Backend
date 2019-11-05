@@ -6,13 +6,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "applicant_id": {
-      "type": "string",
-      "required": true
-    },
     "applicant_name": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "date_created":{
+      "type": "Date",
+      "defaultFn": "now"
     }
   },
   "validations": [],
@@ -21,13 +20,10 @@
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
-    },
-    "roleid": {
-      "type": "belongsTo",
-      "model": "Role",
-      "foreignKey": "roleid"
     }
   },
-  "acls": [],
+  "acls": [
+    
+  ],
   "methods": {}
 }
