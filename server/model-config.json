@@ -18,22 +18,22 @@
   },
   "AccessToken": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "ACL": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "RoleMapping": {
     "dataSource": "mysql",
-    "public": true,
+    "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "Applicant": {
     "dataSource": "mysql",

@@ -6,9 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "user_details_id": {
-      "type": "string"
-    },
     "user_icno": {
       "type": "string"
     },
@@ -21,7 +18,7 @@
   },
   "validations": [],
   "relations": {
-    "user_id": {
+    "fbUser": {
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"

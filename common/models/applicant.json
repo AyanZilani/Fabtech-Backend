@@ -16,7 +16,7 @@
   },
   "validations": [],
   "relations": {
-    "Applicant": {
+    "fbUser": {
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
