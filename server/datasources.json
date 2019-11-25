@@ -8,10 +8,16 @@
     "port": 3306,
     "url": "",
     "database": "fabtech",
-    "password": "FnN6SkdMxlY0omzm",
+    "password": "Dg63Nj9DmIPi5v1S",
     "name": "mysql",
     "user": "fabtech",
     "connector": "mysql",
     "maxOfflineRequests": 200
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage"
   }
 }

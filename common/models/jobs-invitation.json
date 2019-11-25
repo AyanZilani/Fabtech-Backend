@@ -1,0 +1,28 @@
+{
+  "name": "JobsInvitation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isDelete": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "jobsavailable": {
+      "type": "belongsTo",
+      "model": "JobsAvailable",
+      "foreignKey": "job_available_id"
+    },
+    "applicant": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

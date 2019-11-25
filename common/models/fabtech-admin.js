@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Fabtechadmin) {
+module.exports = function(Fabtecadmin) {
 
 };

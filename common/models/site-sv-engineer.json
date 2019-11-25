@@ -1,15 +1,11 @@
 {
-  "name": "Site_sv_engineer",
+  "name": "SiteSvEngineer",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "sv_eng_id": {
-      "type": "string",
-      "required": true
-    },
     "sv_eng_name": {
       "type": "string",
       "required": true
@@ -17,15 +13,10 @@
   },
   "validations": [],
   "relations": {
-    "user_id": {
+    "fbUser": {
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
-    },
-    "roleid": {
-      "type": "belongsTo",
-      "model": "Role",
-      "foreignKey": "roleid"
     }
   },
   "acls": [],

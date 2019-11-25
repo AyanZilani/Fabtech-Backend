@@ -1,20 +1,16 @@
 {
-  "name": "Daily_log_report",
+  "name": "DailyLogReport",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "dlr_id": {
+    "subcontractor_name": {
       "type": "string",
       "required": true
     },
-    "subcontractor": {
-      "type": "string",
-      "required": true
-    },
-    "equipment": {
+    "equipments": {
       "type": "string",
       "required": true
     },
@@ -22,7 +18,7 @@
       "type": "string",
       "required": true
     },
-    "attachment": {
+    "dlr_attachment": {
       "type": "string",
       "required": true
     },
@@ -37,14 +33,14 @@
   },
   "validations": [],
   "relations": {
-    "project_id": {
+    "projectCreated": {
       "type": "belongsTo",
-      "model": "Project_created",
+      "model": "ProjectCreated",
       "foreignKey": "project_id"
     },
-    "sv_eng_id": {
+    "siteSvEngineer": {
       "type": "belongsTo",
-      "model": "Site_sv_engineer",
+      "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
     }
   },

@@ -1,31 +1,22 @@
 {
-  "name": "Operational_director",
+  "name": "OperationalDirector",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "OD_id": {
-      "type": "string",
-      "required": true
-    },
-    "OD_name": {
+    "od_name": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "user_id": {
+    "fbUser": {
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
-    },
-    "roleid": {
-      "type": "belongsTo",
-      "model": "Role",
-      "foreignKey": "roleid"
     }
   },
   "acls": [],

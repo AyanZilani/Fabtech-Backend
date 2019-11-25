@@ -18,22 +18,22 @@
   },
   "AccessToken": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "ACL": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "RoleMapping": {
     "dataSource": "mysql",
-    "public": true,
+    "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "Applicant": {
     "dataSource": "mysql",
@@ -43,23 +43,23 @@
     "dataSource": "mysql",
     "public": true
   },
-  "Fabtech_admin": {
+  "FabtechAdmin": {
     "dataSource": "mysql",
     "public": true
   },
-  "Operational_director": {
+  "OperationalDirector": {
     "dataSource": "mysql",
     "public": true
   },
-  "Broadcast_message": {
+  "BroadcastMessage": {
     "dataSource": "mysql",
     "public": true
   },
-  "Applicant_application": {
+  "ApplicantApplication": {
     "dataSource": "mysql",
     "public": true
   },
-  "Jobs_available": {
+  "JobsAvailable": {
     "dataSource": "mysql",
     "public": true
   },
@@ -67,51 +67,63 @@
     "dataSource": "mysql",
     "public": true
   },
-  "FBUser_details": {
+  "FBUserDetails": {
     "dataSource": "mysql",
     "public": true
   },
-  "Top_management": {
+  "TopManagement": {
     "dataSource": "mysql",
     "public": true
   },
-  "Task_details": {
+  "TaskDetails": {
     "dataSource": "mysql",
     "public": true
   },
-  "Site_sv_engineer": {
+  "SiteSvEngineer": {
     "dataSource": "mysql",
     "public": true
   },
-  "Request_list": {
+  "RequestList": {
     "dataSource": "mysql",
     "public": true
   },
-  "Daily_timesheet": {
+  "DailyTimesheet": {
     "dataSource": "mysql",
     "public": true
   },
-  "Daily_timesheet_details": {
+  "DailyTimesheetDetails": {
     "dataSource": "mysql",
     "public": true
   },
-  "Project_created": {
+  "ProjectCreated": {
     "dataSource": "mysql",
     "public": true
   },
-  "Daily_log_report": {
+  "DailyLogReport": {
     "dataSource": "mysql",
     "public": true
   },
-  "Type_of_services": {
+  "TypeOfServices": {
     "dataSource": "mysql",
     "public": true
   },
-  "Applicant_attachment": {
+  "ListIssuesStatus": {
     "dataSource": "mysql",
     "public": true
   },
-  "List_issues_status": {
+  "ApplicantTrades": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ApplicantCertificates": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Store": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "JobsInvitation": {
     "dataSource": "mysql",
     "public": true
   }
