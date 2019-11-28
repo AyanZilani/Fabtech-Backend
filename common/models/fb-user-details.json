@@ -1,5 +1,5 @@
 {
-  "name": "FBUser_details",
+  "name": "FBUserDetails",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

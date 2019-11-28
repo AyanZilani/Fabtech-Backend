@@ -1,0 +1,44 @@
+{
+  "name": "ApplicantCertificates",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "types": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "string"
+    },
+    "levels": {
+      "type": "string"
+    },
+    "clevel": {
+      "type": "string"
+    },
+    "welding": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "number"
+    },
+    "attachment_certificate": {
+      "type": "string"
+    },
+    "applicant_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "applicant": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

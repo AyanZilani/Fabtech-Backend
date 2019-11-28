@@ -1,5 +1,5 @@
 {
-  "name": "Daily_timesheet",
+  "name": "DailyTimesheet",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -14,10 +14,6 @@
       "type": "string",
       "required": true
     },
-    "dtd_id": {
-      "type": "string",
-      "required": true
-    },
     "dt_datetime": {
       "type": "date",
       "required": true
@@ -29,10 +25,15 @@
   },
   "validations": [],
   "relations": {
-    "sv_eng_id": {
+    "siteSvEngineer": {
       "type": "belongsTo",
-      "model": "Site_sv_engineer",
+      "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
+    },
+    "dailyTimesheetDetails": {
+      "type": "belongsTo",
+      "model": "dailyTimesheetDetails",
+      "foreignKey": "dtd_id"
     }
   },
   "acls": [],

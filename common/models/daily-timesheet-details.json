@@ -1,15 +1,11 @@
 {
-  "name": "Daily_timesheet_details",
+  "name": "DailyTimesheetDetails",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "dtd_id": {
-      "type": "string",
-      "required": true
-    },
     "time_in": {
       "type": "string",
       "required": true
@@ -22,7 +18,7 @@
       "type": "string",
       "required": true
     },
-    "attachment": {
+    "dtd_attachment": {
       "type": "string",
       "required": true
     },
@@ -37,9 +33,9 @@
   },
   "validations": [],
   "relations": {
-    "dt_id": {
+    "dailyTimesheet": {
       "type": "belongsTo",
-      "model": "Daily_timesheet",
+      "model": "DailyTimesheet",
       "foreignKey": "dt_id"
     }
   },

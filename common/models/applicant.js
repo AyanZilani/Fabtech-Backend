@@ -75,13 +75,11 @@ async function lists(app, cb){
         // console.log(_user)
         let ids = []
         _user.forEach(element => {
-            ids.push({id: element.user_id})
+            ids.push({user_id: element.user_id})
         });
-        console.log(ids)
 
-        // let _detail = await PromiseModel.find(app.models.FBUser_details, {where: {or: ids}})
-        let _detail = await PromiseModel.find(app.models.FBUser, {where: {or: ids}, include:['fBUser_details','applicant']})
-        console.log(_detail)
+        let _detail = await PromiseModel.find(app.models.FBUser_details, {where: {or: ids}})
+        // console.log(_detail)
 
         // _detail.
 

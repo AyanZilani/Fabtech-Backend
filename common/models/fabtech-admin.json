@@ -1,15 +1,11 @@
 {
-  "name": "Fabtech_admin",
+  "name": "FabtechAdmin",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "fa_id": {
-      "type": "string",
-      "required": true
-    },
     "fa_name": {
       "type": "string",
       "required": true
@@ -17,15 +13,10 @@
   },
   "validations": [],
   "relations": {
-    "user_id": {
+    "fbUser": {
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
-    },
-    "roleid": {
-      "type": "belongsTo",
-      "model": "Role",
-      "foreignKey": "roleid"
     }
   },
   "acls": [],

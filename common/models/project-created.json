@@ -1,15 +1,11 @@
 {
-  "name": "Project_created",
+  "name": "ProjectCreated",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "project_id": {
-      "type": "string",
-      "required": true
-    },
     "service_id": {
       "type": "string",
       "required": true
@@ -25,14 +21,14 @@
   },
   "validations": [],
   "relations": {
-    "roleid": {
+    "topManagement": {
       "type": "belongsTo",
-      "model": "Role",
-      "foreignKey": "roleid"
+      "model": "TopManagement",
+      "foreignKey": "top_management_id"
     },
-    "sv_eng_id": {
+    "siteSvEngineer": {
       "type": "belongsTo",
-      "model": "Site_sv_engineer",
+      "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
     }
   },

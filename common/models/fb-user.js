@@ -25,12 +25,40 @@ module.exports = function(FbUser) {
             let Role = app.models.Role
             Role.findOne({where:{id:result.roleId}},function(err2,result2){
                 if (err2) return next(err2)
+
+                
                 console.log(result2)
                 ctx.result.role = result2.name
                 next()
             })
         })
+    })
+    FbUser.register_applicant = function (req,cb) {
+        if(typeof(req.body.username)==='undefined'){
+            return cb({statusCode: 400, message:'Missing username.'})   
+        }
+        if(typeof(req.body.password)==='undefined'){
+            return cb({statusCode: 400, message:'Missing password.'})   
+        }
 
+        // ------------------------------------------------------
+        if(typeof(req.body.email)==='undefined'){
+            // create dummy email
+            // req.body.email = req.body.username + Date.now()+'@sample.com'
+            return cb({statusCode: 400, message:'Missing email.'})   
+        }
+        // ------------------------------------------------------
+        _registerApplicant(app, req, cb)
+    }
+    FbUser.remoteMethod('register_applicant', {
+        description: `Register User Applicant`,
+        isStatic: true,
+        accepts: [{arg: 'req', type: 'object', 'http': {source: 'req'}}],
+        returns: {
+            type: 'object',
+            root: true
+        },
+        http: { path: '/register/applicant', verb: 'post' }
     })
 
     FbUser.register_applicant = function (req,cb) {

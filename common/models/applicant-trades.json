@@ -1,0 +1,27 @@
+{
+  "name": "ApplicantTrades",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "trade_name": {
+      "type": "string"
+    },
+    "applicant_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "applicant": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

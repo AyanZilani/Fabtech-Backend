@@ -5,29 +5,31 @@ const uuidv1 = require('uuid/v1');
 
 var modelList = [
     'FBUser',
-    'FBUser_details',
+    'FBUserDetails',
     'Applicant',
-    'Applicant_application',
-    'Applicant_attachment',
-    'Jobs_available',
-    'Fabtech_admin',
+    'ApplicantApplication',
+    'ApplicantTrades',
+    'ApplicantCertificates',
+    'JobsAvailable',
+    'FabtechAdmin',
     'Message',
-    'Broadcast_message',
-    'Top_management',
-    'Task_details',
-    'Site_sv_engineer',
-    'Daily_log_report',
-    'Daily_timesheet',
-    'Daily_timesheet_details',
-    'Request_list',
-    'List_issues_status',
-    'Operational_director',
-    'Type_of_services',
-    'Project_created',
+    'BroadcastMessage',
+    'TopManagement',
+    'TaskDetails',
+    'SiteSvEngineer',
+    'DailyLogReport',
+    'DailyTimesheet',
+    'DailyTimesheetDetails',
+    'RequestList',
+    'ListIssuesStatus',
+    'OperationalDirector',
+    'TypeOfServices',
+    'ProjectCreated',
     'AccessToken',
     'ACL',
     'RoleMapping',
-    'Role'
+    'Role',
+    'JobsInvitation'
     
 ];
 
@@ -74,6 +76,38 @@ function insertDefaultFBUser(app,username,email,password){
         })
     })
 }
+
+function insertDefaultJobs_available(app,job_name,job_type,job_details){
+    var JobsAvailable = app.models.JobsAvailable;
+    return new Promise((resolve,reject)=>{
+        JobsAvailable.create({
+            'job_id': uuidv1(),
+            'job_name':job_name,
+            'job_type':job_type,
+            'job_details':job_details
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
+function insertDefaultApplicant(app,applicant_name,applicant_icno,applicant_passportno,applicant_address,applicant_other_detail){
+    var Applicant = app.models.Applicant;
+    return new Promise((resolve,reject)=>{
+        Applicant.create({
+            'applicant_id': uuidv1(),
+            'applicant_name':applicant_name,
+            'applicant_icno':applicant_icno,
+            'applicant_passportno':applicant_passportno,
+            'applicant_address':applicant_address,
+            'applicant_other_detail':applicant_other_detail
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
 //================================================================
 async function migrate(){
     try{
@@ -87,6 +121,12 @@ async function migrate(){
         let Fabtech_admin = await createRole(app,"Fabtech_admin");
         let Site_sv_engineer = await createRole(app,"Site_sv_engineer");
         let Top_management = await createRole(app,"Top_management");
+
+        let job1 = await insertDefaultJobs_available(app,"job1","scaffolding","job description 1")
+        let job2 = await insertDefaultJobs_available(app,"job2","welding","job description 2")
+        let job3 = await insertDefaultJobs_available(app,"job3","general working","job description 3")
+
+        let applicant1 = await insertDefaultApplicant(app,"Mohd Ali Bin Maskur","800101014333","-","Taman Molek, JB","details")
 
         console.log("Creating user 1 ...");
         let user1 = await insertDefaultFBUser(app,"applicant1","applicant1@system.com","1234567");

@@ -1,15 +1,11 @@
 {
-  "name": "List_issues_status",
+  "name": "ListIssuesStatus",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "issues_id": {
-      "type": "string",
-      "required": true
-    },
     "issues_title": {
       "type": "string",
       "required": true
@@ -34,10 +30,6 @@
       "type": "string",
       "required": true
     },
-    "issues_details": {
-      "type": "string",
-      "required": true
-    },
     "sv_verify": {
       "type": "string",
       "required": true
@@ -49,19 +41,14 @@
   },
   "validations": [],
   "relations": {
-    "user_id": {
+    "projectCreated": {
       "type": "belongsTo",
-      "model": "FBUser",
-      "foreignKey": "user_id"
-    },
-    "project_id": {
-      "type": "belongsTo",
-      "model": "Project_created",
+      "model": "ProjectCreated",
       "foreignKey": "project_id"
     },
-    "sv_eng_id": {
+    "siteSvEngineer": {
       "type": "belongsTo",
-      "model": "Site_sv_engineer",
+      "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
     }
   },

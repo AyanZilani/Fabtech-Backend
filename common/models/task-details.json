@@ -1,15 +1,11 @@
 {
-  "name": "Task_details",
+  "name": "TaskDetails",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "task_id": {
-      "type": "string",
-      "required": true
-    },
     "task_title": {
       "type": "string",
       "required": true
@@ -29,9 +25,9 @@
   },
   "validations": [],
   "relations": {
-    "top_management_id": {
+    "topManagement": {
       "type": "belongsTo",
-      "model": "Top_management",
+      "model": "TopManagement",
       "foreignKey": "top_management_id"
     }
   },
