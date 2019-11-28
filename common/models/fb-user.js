@@ -1,6 +1,5 @@
 'use strict';
 const PromiseModel = require('../promise-model')
-
 module.exports = function(FbUser) {
 
     FbUser.Applicant = 'Applicant'
@@ -34,6 +33,34 @@ module.exports = function(FbUser) {
             })
         })
     })
+    FbUser.register_applicant = function (req,cb) {
+        if(typeof(req.body.username)==='undefined'){
+            return cb({statusCode: 400, message:'Missing username.'})   
+        }
+        if(typeof(req.body.password)==='undefined'){
+            return cb({statusCode: 400, message:'Missing password.'})   
+        }
+
+        // ------------------------------------------------------
+        if(typeof(req.body.email)==='undefined'){
+            // create dummy email
+            // req.body.email = req.body.username + Date.now()+'@sample.com'
+            return cb({statusCode: 400, message:'Missing email.'})   
+        }
+        // ------------------------------------------------------
+        _registerApplicant(app, req, cb)
+    }
+    FbUser.remoteMethod('register_applicant', {
+        description: `Register User Applicant`,
+        isStatic: true,
+        accepts: [{arg: 'req', type: 'object', 'http': {source: 'req'}}],
+        returns: {
+            type: 'object',
+            root: true
+        },
+        http: { path: '/register/applicant', verb: 'post' }
+    })
+
     FbUser.register_applicant = function (req,cb) {
         if(typeof(req.body.username)==='undefined'){
             return cb({statusCode: 400, message:'Missing username.'})   
@@ -105,13 +132,13 @@ async function _registerApplicant(app, req, cb){
                 roleId: _role.id})
         
         // Create FUser Detail
-        await PromiseModel.create(app.models.FBUserDetails, {user_id: _user.id})
+        await PromiseModel.create(app.models.FBUser_details, {user_id: _user.id})
         
         // Create Applicant
-        //await PromiseModel.create(app.models.Applicant, {user_id: _user.id})
+        await PromiseModel.create(app.models.Applicant, {user_id: _user.id})
 
         // cb(null, _user)
-        cb(null, {message: 'Register Completed', id: _user.id})
+        cb(null, {status: 'OK', id: _user.id})
     } catch (err) {
         cb(err)
     }

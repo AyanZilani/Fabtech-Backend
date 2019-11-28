@@ -6,77 +6,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "length": 50
+    "applicant_name": {
+      "type": "string"
     },
-    "icno": {
-      "type": "string",
-      "length": 50
-    },
-    "passportno": {
-      "type": "string",
-      "length": 50
-    },
-    "nationality": {
-      "type": "string",
-      "length": 50
-    },
-    "street1": {
-      "type": "string",
-      "length": 100
-    },
-    "street2": {
-      "type": "string",
-      "length": 100
-    },
-    "street3": {
-      "type": "string",
-      "length": 100
-    },
-    "postcode": {
-      "type": "string",
-      "length": 50
-    },
-    "city": {
-      "type": "string",
-      "length": 50
-    },
-    "state": {
-      "type": "string",
-      "length": 50
-    },
-    "country": {
-      "type": "string",
-      "length": 50
-    },
-    "dob": {
-      "type": "string",
-      "length": 50
-    },
-    "profile_pic": {
-      "type": "string",
-      "length": 50
-    },
-    "attachment_ic": {
-      "type": "string",
-      "length": 50
-    },
-    "attachment_passport": {
-      "type": "string",
-      "length": 50
-    },
-    "education": {
-      "type": "string",
-      "length": 50
-    },
-    "attachment_education": {
-      "type": "string",
-      "length": 50
-    },
-    "attachment_resumecv": {
-      "type": "string",
-      "length": 50
+    "date_created":{
+      "type": "Date",
+      "defaultFn": "now"
     }
   },
   "validations": [],
@@ -85,18 +20,10 @@
       "type": "belongsTo",
       "model": "FBUser",
       "foreignKey": "user_id"
-    },
-    "jobsInvitation": {
-      "type": "hasMany",
-      "model": "JobsInvitation",
-      "foreignKey": "applicant_id"
-    },
-    "applicantApplication": {
-      "type": "hasMany",
-      "model": "ApplicantApplication",
-      "foreignKey": "applicant_id"
     }
   },
-  "acls": [],
+  "acls": [
+    
+  ],
   "methods": {}
 }

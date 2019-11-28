@@ -6,18 +6,20 @@
     "validateUpsert": true
   },
   "properties": {
-    "username": {
-      "type": "string"
-    },
-    "password": {
-      "type": "string"
-    },
-    "email": {
-      "type": "string"
-    }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "fBUser_details": {
+      "type": "hasOne",
+      "model": "FBUser_details",
+      "foreignKey": "user_id"
+    },
+    "applicant": {
+      "type": "hasOne",
+      "model": "Applicant",
+      "foreignKey": "user_id"
+    }
+  },
   "acls": [
     {
       "accessType": "*",
