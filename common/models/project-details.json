@@ -1,0 +1,24 @@
+{
+  "name": "ProjectDetails",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "details": {
+      "type": "string",
+      "length": 250
+    }
+  },
+  "validations": [],
+  "relations": {
+    "projectcreated": {
+      "type": "belongsTo",
+      "model": "ProjectCreated",
+      "foreignKey": "project_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

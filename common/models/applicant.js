@@ -42,6 +42,7 @@ module.exports = function(Applicant) {
 
         _registerUser(app,req,cb)
     }
+    
     Applicant.remoteMethod('register', {
         description: `Register User Manager`,
         isStatic: true,
@@ -87,9 +88,9 @@ async function lists(app, cb){
            
             for (let j = 0; j < _detail.length; j++) {
 
-                // console.log(_detail[j])
-                // console.log(_detail[j].user_phoneno)
-                // console.log(_detail[j].user_id)
+                console.log(_detail[j])
+                console.log(_detail[j].user_phoneno)
+                console.log(_detail[j].user_id)
                 // console.log(_detail[j].user_id.getAsync())
                 // _detail[j].user_id.getAsync().then(res=>{
                 //     console.log(res)
@@ -128,40 +129,31 @@ async function lists(app, cb){
             
         }
 
-        // app.models.FBUser_details.find({where: {or: ids}}, function(err, result){
-        //     if(err){
-        //         return
-        //     }
-        //     result[0].user_id.get(function(err, res){
-        //         console.log(res)
-        //     })
-        //     result[1].user_id.get(function(err, res){
-        //         console.log(res)
-        //     })
-        //     result[2].user_id.get(function(err, res){
-        //         console.log(res)
-        //     })
+        app.models.FBUser_details.find({where: {or: ids}}, function(err, result){
+            if(err){
+                return
+            }
 
-        //     console.log('-------------')
-        //     // result.forEach(element=>{
-        //     //     // console.log(element.user_id)
-        //     //     // element.user_id.get(function(e, re){
-        //     //     //     console.log(re)
-        //     //     // })
-        //     //     // element.user_id(function(e, re){
-        //     //     //     console.log(re)
-        //     //     // })
-        //     //     element.user_id.build(function(e, re){
-        //     //         console.log(re)
-        //     //     })
-        //     // })
-        // })
+            console.log('-------------')
+            result.forEach(element=>{
+                // console.log(element.user_id)
+                // element.user_id.get(function(e, re){
+                //     console.log(re)
+                // })
+                // element.user_id(function(e, re){
+                //     console.log(re)
+                // })
+                element.user_id.build(function(e, re){
+                    console.log(re)
+                })
+            })
+        })
 
 
         // console.log(_user)
 
         // {or:[{id: 1},{id:2}]}
     } catch (error) {
-        console.log(error)
+        
     }
 }

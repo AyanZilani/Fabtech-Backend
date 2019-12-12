@@ -126,5 +126,13 @@
   "JobsInvitation": {
     "dataSource": "mysql",
     "public": true
+  },
+  "ProjectDetails": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ProjectAssigned": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

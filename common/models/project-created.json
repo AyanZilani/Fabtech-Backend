@@ -6,13 +6,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "service_id": {
-      "type": "string",
-      "required": true
+    "project_id": {
+      "type": "number"
     },
     "project_name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "project_duration": {
       "type": "string",
@@ -21,15 +19,10 @@
   },
   "validations": [],
   "relations": {
-    "topManagement": {
+    "typeservices": {
       "type": "belongsTo",
-      "model": "TopManagement",
-      "foreignKey": "top_management_id"
-    },
-    "siteSvEngineer": {
-      "type": "belongsTo",
-      "model": "SiteSvEngineer",
-      "foreignKey": "sv_eng_id"
+      "model": "TypeOfServices",
+      "foreignKey": "service_id"
     }
   },
   "acls": [],
