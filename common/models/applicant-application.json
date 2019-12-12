@@ -7,13 +7,16 @@
   },
   "properties": {
     "application_datetime": {
-      "type": "string"
+      "type": "DateString"
     },
     "application_type": {
       "type": "string"
     },
     "application_status": {
       "type": "string"
+    },
+    "isHide": {
+      "type": "boolean"
     }
   },
   "validations": [],

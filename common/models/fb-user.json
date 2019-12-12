@@ -6,20 +6,18 @@
     "validateUpsert": true
   },
   "properties": {
-  },
-  "validations": [],
-  "relations": {
-    "fBUser_details": {
-      "type": "hasOne",
-      "model": "FBUser_details",
-      "foreignKey": "user_id"
+    "username": {
+      "type": "string"
     },
-    "applicant": {
-      "type": "hasOne",
-      "model": "Applicant",
-      "foreignKey": "user_id"
+    "password": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   },
+  "validations": [],
+  "relations": {},
   "acls": [
     {
       "accessType": "*",
@@ -32,7 +30,9 @@
       "principalId": "$unauthenticated",
       "permission": "ALLOW",
       "property": [
-        "register_applicant"
+        "register_applicant",
+        "response_fb",
+        "list_systemuser"
       ]
     }
   ],

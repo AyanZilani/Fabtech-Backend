@@ -1,0 +1,44 @@
+'use strict';
+var app = require('../server/server');
+const uuidv1 = require('uuid/v1');
+
+var modelList = [
+    'FBUser',
+    'FBUserDetails',
+    'Applicant',
+    'ApplicantApplication',
+    'ApplicantTrades',
+    'ApplicantCertificates',
+    'JobsAvailable',
+    'FabtechAdmin',
+    'Message',
+    'BroadcastMessage',
+    'TopManagement',
+    'TaskDetails',
+    'SiteSvEngineer',
+    'DailyLogReport',
+    'DailyTimesheet',
+    'DailyTimesheetDetails',
+    'RequestList',
+    'ListIssuesStatus',
+    'OperationalDirector',
+    'TypeOfServices',
+    'ProjectCreated',
+    'AccessToken',
+    'ACL',
+    'RoleMapping',
+    'Role',
+    'JobsInvitation',
+    'ProjectDetails',
+    'ProjectAssigned'
+    
+];
+
+
+var ds = app.datasources.mysql;
+
+ds.autoupdate(modelList, function(err, result){ 
+    if(err) throw err;
+    console.log('Loopback Tables ['+ modelList +'] updated in', ds.adapter.name)
+    ds.disconnect()
+})

@@ -39,12 +39,18 @@
     "job_end": {
       "type": "string"
     },
+    "rateperhour": {
+      "type": "string"
+    },
     "application_type": {
+      "type": "string"
+    },
+    "no_position": {
       "type": "string"
     }
   },
   "validations": [],
-  "applicantApplication": {
+  "relations": {
     "applicant": {
       "type": "hasMany",
       "model": "ApplicantApplication",
