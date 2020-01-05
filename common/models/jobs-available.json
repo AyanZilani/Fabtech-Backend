@@ -9,7 +9,7 @@
     "job_name": {
       "type": "string"
     },
-    "job_type": {
+    "preferred_trade": {
       "type": "string"
     },
     "job_description": {
@@ -47,11 +47,17 @@
     },
     "no_position": {
       "type": "string"
+    },
+    "isHide": {
+      "type": "boolean"
+    },
+    "isClose": {
+      "type": "boolean"
     }
   },
   "validations": [],
   "relations": {
-    "applicant": {
+    "applicantapplication": {
       "type": "hasMany",
       "model": "ApplicantApplication",
       "foreignKey": "job_available_id"

@@ -17,6 +17,9 @@
     },
     "isHide": {
       "type": "boolean"
+    },
+    "isAssign": {
+      "type": "boolean"
     }
   },
   "validations": [],

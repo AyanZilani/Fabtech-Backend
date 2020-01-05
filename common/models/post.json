@@ -1,28 +1,27 @@
 {
-  "name": "ApplicantTrades",
+  "name": "Post",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "trade_name": {
+    "post_title": {
       "type": "string"
     },
-    "applicant_id": {
-      "type": "string",
-      "required": true
+    "post_content": {
+      "type": "string"
     },
-    "isSelected": {
-      "type": "boolean"
+    "post_datetime": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "applicant": {
+    "fbUser": {
       "type": "belongsTo",
-      "model": "Applicant",
-      "foreignKey": "applicant_id"
+      "model": "FBUser",
+      "foreignKey": "user_id"
     }
   },
   "acls": [],
