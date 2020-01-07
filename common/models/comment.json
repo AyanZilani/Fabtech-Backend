@@ -1,27 +1,29 @@
 {
-  "name": "ProjectAssigned",
+  "name": "Comment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "sv_eng_name": {
-      "type": "string",
-      "required": true
+    "comment_content": {
+      "type": "string"
+    },
+    "comment_datetime": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "projectcreated": {
+    "fbUser": {
       "type": "belongsTo",
-      "model": "ProjectCreated",
-      "foreignKey": "project_id"
+      "model": "FBUser",
+      "foreignKey": "user_id"
     },
-    "applicant": {
+    "post": {
       "type": "belongsTo",
-      "model": "Applicant",
-      "foreignKey": "applicant_id"
+      "model": "Post",
+      "foreignKey": "post_id"
     }
   },
   "acls": [],

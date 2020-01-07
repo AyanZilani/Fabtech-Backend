@@ -30,8 +30,13 @@ var modelList = [
     'Role',
     'JobsInvitation',
     'ProjectDetails',
-    'ProjectAssigned'
-    
+    'ProjectAssigned',
+    'Post',
+    'Comment',
+    'TradeCertLinked',
+    'Certificates',
+    'Trades',
+    'AdditionalCertificate'
 ];
 
 

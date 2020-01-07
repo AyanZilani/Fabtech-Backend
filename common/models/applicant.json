@@ -54,6 +54,10 @@
       "type": "string",
       "length": 50
     },
+    "age": {
+      "type": "string",
+      "length": 50
+    },
     "profile_pic": {
       "type": "string",
       "length": 50
@@ -77,6 +81,10 @@
     "attachment_resumecv": {
       "type": "string",
       "length": 50
+    },
+    "phone_no": {
+      "type": "string",
+      "length": 20
     }
   },
   "validations": [],
@@ -94,6 +102,16 @@
     "applicantApplication": {
       "type": "hasMany",
       "model": "ApplicantApplication",
+      "foreignKey": "applicant_id"
+    },
+    "applicanttrade": {
+      "type": "hasMany",
+      "model": "ApplicantTrades",
+      "foreignKey": "applicant_id"
+    },
+    "applicantcertificates": {
+      "type": "hasMany",
+      "model": "ApplicantCertificates",
       "foreignKey": "applicant_id"
     }
   },

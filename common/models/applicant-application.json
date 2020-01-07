@@ -15,7 +15,16 @@
     "application_status": {
       "type": "string"
     },
+    "applicant_trade": {
+      "type": "string"
+    },
     "isHide": {
+      "type": "boolean"
+    },
+    "isAssign": {
+      "type": "boolean"
+    },
+    "isSelect": {
       "type": "boolean"
     }
   },

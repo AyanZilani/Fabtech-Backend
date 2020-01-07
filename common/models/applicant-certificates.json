@@ -27,9 +27,17 @@
     "attachment_certificate": {
       "type": "string"
     },
+    "trade_name": {
+      "type": "string"
+    },
     "applicant_id": {
       "type": "string"
+    },
+    "remark": {
+      "type": "string",
+      "order": "asc"
     }
+
   },
   "validations": [],
   "relations": {

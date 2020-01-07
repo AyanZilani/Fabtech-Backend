@@ -7,16 +7,31 @@
   },
   "properties": {
     "request_type": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "request_datetime": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "request_location": {
+      "type": "string"
     },
     "request_status": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "request_approval": {
+      "type": "string"
+    },
+    "request_requestor": {
+      "type": "string"
+    },
+    "request_desc": {
+      "type": "string"
+    },
+    "request_pic": {
+      "type": "string"
+    },
+    "field_pic": {
+      "type": "string"
     }
   },
   "validations": [],

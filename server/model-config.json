@@ -134,5 +134,29 @@
   "ProjectAssigned": {
     "dataSource": "mysql",
     "public": true
+  },
+  "Post": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Comment": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TradeCertLinked": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Trades": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Certificates": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AdditionalCertificate": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

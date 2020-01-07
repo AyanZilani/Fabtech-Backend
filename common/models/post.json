@@ -1,0 +1,29 @@
+{
+  "name": "Post",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "post_title": {
+      "type": "string"
+    },
+    "post_content": {
+      "type": "string"
+    },
+    "post_datetime": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "fbUser": {
+      "type": "belongsTo",
+      "model": "FBUser",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
