@@ -12,9 +12,6 @@
     "applicant_id": {
       "type": "string",
       "required": true
-    },
-    "isSelected": {
-      "type": "boolean"
     }
   },
   "validations": [],

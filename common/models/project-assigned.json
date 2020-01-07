@@ -5,7 +5,12 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "sv_eng_name": {
+      "type": "string",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {
     "projectcreated": {
@@ -17,16 +22,6 @@
       "type": "belongsTo",
       "model": "Applicant",
       "foreignKey": "applicant_id"
-    },
-    "jobsavailable": {
-      "type": "belongsTo",
-      "model": "JobsAvailable",
-      "foreignKey": "job_id"
-    },
-    "sitesvengineer": {
-      "type": "belongsTo",
-      "model": "SiteSvEngineer",
-      "foreignKey": "sv_eng_id"
     }
   },
   "acls": [],
