@@ -36,8 +36,10 @@
     "remark": {
       "type": "string",
       "order": "asc"
+    },
+    "isInvited": {
+      "type": "boolean"
     }
-
   },
   "validations": [],
   "relations": {

@@ -1,0 +1,24 @@
+{
+  "name": "ProjectSvEng",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "sitesvengineer": {
+      "type": "belongsTo",
+      "model": "SiteSvEngineer",
+      "foreignKey": "sv_eng_id"
+    },
+    "projectcreated": {
+      "type": "belongsTo",
+      "model": "ProjectCreated",
+      "foreignKey": "project_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

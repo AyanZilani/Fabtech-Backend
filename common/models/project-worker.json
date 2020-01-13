@@ -1,0 +1,24 @@
+{
+  "name": "ProjectWorker",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "applicant": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    },
+    "projectcreated": {
+      "type": "belongsTo",
+      "model": "ProjectCreated",
+      "foreignKey": "project_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -6,15 +6,17 @@
     "validateUpsert": true
   },
   "properties": {
-    "project_id": {
-      "type": "number"
-    },
     "project_name": {
       "type": "string"
     },
     "project_duration": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "project_start": {
+      "type": "string"
+    },
+    "project_end": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -23,6 +25,11 @@
       "type": "belongsTo",
       "model": "TypeOfServices",
       "foreignKey": "service_id"
+    },
+    "projectdetails": {
+      "type": "hasMany",
+      "model": "ProjectDetails",
+      "foreignKey": "project_id"
     }
   },
   "acls": [],
