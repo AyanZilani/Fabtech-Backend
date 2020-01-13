@@ -9,6 +9,18 @@
     "details": {
       "type": "string",
       "length": 250
+    },
+    "status": {
+      "type": "string",
+      "length": 250
+    },
+    "details_attachment": {
+      "type": "string",
+      "length": 250
+    },
+    "details_remark": {
+      "type": "string",
+      "length": 250
     }
   },
   "validations": [],

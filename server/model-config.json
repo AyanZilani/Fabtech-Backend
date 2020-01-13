@@ -158,5 +158,13 @@
   "AdditionalCertificate": {
     "dataSource": "mysql",
     "public": true
+  },
+  "ProjectSvEng": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ProjectWorker": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

@@ -36,7 +36,9 @@ var modelList = [
     'TradeCertLinked',
     'Certificates',
     'Trades',
-    'AdditionalCertificate'
+    'AdditionalCertificate',
+    'ProjectSvEng',
+    'ProjectWorker'
 ];
 
 
