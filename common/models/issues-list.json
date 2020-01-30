@@ -1,53 +1,58 @@
 {
-  "name": "RequestList",
+  "name": "IssuesList",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "request_type": {
+    "issue_datetime": {
       "type": "string"
     },
-    "request_datetime": {
+    "location": {
       "type": "string"
     },
-    "request_location": {
+    "due_date": {
       "type": "string"
     },
-    "request_status": {
+    "description": {
       "type": "string"
     },
-    "request_approvalName": {
+    "attachment": {
       "type": "string"
     },
-    "request_approvalType": {
+    "status": {
       "type": "string"
     },
-    "request_requestorType": {
+    "remark": {
       "type": "string"
     },
-    "request_requestorName": {
-      "type": "string"
+    "isHide": {
+      "type": "boolean"
     },
-    "request_desc": {
-      "type": "string"
+    "isImpactAWO": {
+      "type": "boolean"
     },
-    "request_pic": {
+    "modified_datetime": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "projectcreated": {
+    "issuetype": {
       "type": "belongsTo",
-      "model": "ProjectCreated",
-      "foreignKey": "project_id"
+      "model": "IssueType",
+      "foreignKey": "issuetype_id"
     },
     "sitesvengineer": {
       "type": "belongsTo",
       "model": "SiteSvEngineer",
-      "foreignKey": "sv_eng_id"
+      "foreignKey": "issued_by"
+    },
+    "projectcreated": {
+      "type": "belongsTo",
+      "model": "ProjectCreated",
+      "foreignKey": "project_id"
     }
   },
   "acls": [],

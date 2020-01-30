@@ -107,10 +107,6 @@
     "dataSource": "mysql",
     "public": true
   },
-  "ListIssuesStatus": {
-    "dataSource": "mysql",
-    "public": true
-  },
   "ApplicantTrades": {
     "dataSource": "mysql",
     "public": true
@@ -164,6 +160,22 @@
     "public": true
   },
   "ProjectWorker": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "LogType": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "IssueType": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "IssuesList": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "InternalMessage": {
     "dataSource": "mysql",
     "public": true
   }

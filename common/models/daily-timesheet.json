@@ -6,34 +6,48 @@
     "validateUpsert": true
   },
   "properties": {
-    "dt_id": {
-      "type": "string",
-      "required": true
+    "time_in": {
+      "type": "string"
     },
-    "worker_id": {
-      "type": "string",
-      "required": true
+    "time_out": {
+      "type": "string"
     },
-    "dt_datetime": {
-      "type": "date",
-      "required": true
+    "time_in2": {
+      "type": "string"
     },
-    "attendance": {
-      "type": "string",
-      "required": true
+    "time_out2": {
+      "type": "string"
+    },
+    "isPresent": {
+      "type": "boolean"
+    },
+    "normal_wh": {
+      "type": "string"
+    },
+    "ot_wh": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
     }
+    
   },
   "validations": [],
   "relations": {
+    "applicant": {
+      "type": "belongsTo",
+      "model": "Applicant",
+      "foreignKey": "applicant_id"
+    },
     "siteSvEngineer": {
       "type": "belongsTo",
       "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
     },
-    "dailyTimesheetDetails": {
+    "projectcreated": {
       "type": "belongsTo",
-      "model": "dailyTimesheetDetails",
-      "foreignKey": "dtd_id"
+      "model": "ProjectCreated",
+      "foreignKey": "project_id"
     }
   },
   "acls": [],

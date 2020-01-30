@@ -21,6 +21,18 @@
     "details_remark": {
       "type": "string",
       "length": 250
+    },
+    "isAdditional": {
+      "type": "boolean"
+    },
+    "modified_datetime": {
+      "type": "string"
+    },
+    "start_datetime": {
+      "type": "string"
+    },
+    "end_datetime": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -29,6 +41,16 @@
       "type": "belongsTo",
       "model": "ProjectCreated",
       "foreignKey": "project_id"
+    },
+    "requestlist": {
+      "type": "belongsTo",
+      "model": "RequestList",
+      "foreignKey": "requestlist_id"
+    },
+    "sitesvengineer": {
+      "type": "belongsTo",
+      "model": "SiteSvEngineer",
+      "foreignKey": "sv_eng_id"
     }
   },
   "acls": [],
