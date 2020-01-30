@@ -20,7 +20,6 @@ var modelList = [
     'DailyTimesheet',
     'DailyTimesheetDetails',
     'RequestList',
-    'ListIssuesStatus',
     'OperationalDirector',
     'TypeOfServices',
     'ProjectCreated',
@@ -38,7 +37,11 @@ var modelList = [
     'Trades',
     'AdditionalCertificate',
     'ProjectSvEng',
-    'ProjectWorker'
+    'ProjectWorker',
+    'LogType',
+    'IssueType',
+    'IssuesList',
+    'InternalMessage'
 ];
 
 
