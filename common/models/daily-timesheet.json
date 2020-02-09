@@ -39,7 +39,7 @@
       "model": "Applicant",
       "foreignKey": "applicant_id"
     },
-    "siteSvEngineer": {
+    "sitesvengineer": {
       "type": "belongsTo",
       "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"

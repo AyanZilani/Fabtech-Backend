@@ -248,6 +248,10 @@ async function _registerSystemuser(app, req, cb){
 
             await PromiseModel.create(app.models.SiteSvEngineer, {sv_eng_name: req.body.username, user_id: _user.id})
 
+        } else if(req.body.role === "Operational_director"){
+            
+            await PromiseModel.create(app.models.OperationalDirector, {od_name: req.body.username, user_id: _user.id})
+            
         }
 
 
