@@ -47,6 +47,11 @@
       "type": "belongsTo",
       "model": "Applicant",
       "foreignKey": "applicant_id"
+    },
+    "jobsinvitation": {
+      "type": "belongsTo",
+      "model": "JobsInvitation",
+      "foreignKey": "inv_id"
     }
   },
   "acls": [],

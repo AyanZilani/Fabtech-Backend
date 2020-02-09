@@ -21,7 +21,6 @@ var modelList = [
     'DailyTimesheet',
     'DailyTimesheetDetails',
     'RequestList',
-    'ListIssuesStatus',
     'OperationalDirector',
     'TypeOfServices',
     'ProjectCreated',
@@ -29,7 +28,21 @@ var modelList = [
     'ACL',
     'RoleMapping',
     'Role',
-    'JobsInvitation'
+    'JobsInvitation',
+    'ProjectDetails',
+    'ProjectAssigned',
+    'Post',
+    'Comment',
+    'TradeCertLinked',
+    'Certificates',
+    'Trades',
+    'AdditionalCertificate',
+    'ProjectSvEng',
+    'ProjectWorker',
+    'LogType',
+    'IssueType',
+    'IssuesList',
+    'InternalMessage'
     
 ];
 
@@ -92,6 +105,67 @@ function insertDefaultJobs_available(app,job_name,job_type,job_details){
     })
 }
 
+function insertAdditionalCert(app,certificate_name){
+    var AdditionalCertificate = app.models.AdditionalCertificate;
+    return new Promise((resolve,reject)=>{
+        AdditionalCertificate.create({
+            'certificate_name':certificate_name,
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
+function insertTradeCertLinked(app,trade_name, certificate_name){
+    var TradeCertLinked = app.models.TradeCertLinked;
+    return new Promise((resolve,reject)=>{
+        TradeCertLinked.create({
+            'trade_name':trade_name,
+            'certificate_name':certificate_name,
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
+function insertTypeServices(app,service_name){
+    var TypeOfServices = app.models.TypeOfServices;
+    return new Promise((resolve,reject)=>{
+        TypeOfServices.create({
+            'service_name':service_name
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
+function insertIssueType(app,name){
+    var IssueType = app.models.IssueType;
+    return new Promise((resolve,reject)=>{
+        IssueType.create({
+            'name':name
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
+function insertTrades(app,trade_name){
+    var Trades = app.models.Trades;
+    return new Promise((resolve,reject)=>{
+        Trades.create({
+            'trade_name':trade_name
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
 function insertDefaultApplicant(app,applicant_name,applicant_icno,applicant_passportno,applicant_address,applicant_other_detail){
     var Applicant = app.models.Applicant;
     return new Promise((resolve,reject)=>{
@@ -108,6 +182,7 @@ function insertDefaultApplicant(app,applicant_name,applicant_icno,applicant_pass
         })
     })
 }
+
 //================================================================
 async function migrate(){
     try{
@@ -122,11 +197,61 @@ async function migrate(){
         let Site_sv_engineer = await createRole(app,"Site_sv_engineer");
         let Top_management = await createRole(app,"Top_management");
 
-        let job1 = await insertDefaultJobs_available(app,"job1","scaffolding","job description 1")
-        let job2 = await insertDefaultJobs_available(app,"job2","welding","job description 2")
-        let job3 = await insertDefaultJobs_available(app,"job3","general working","job description 3")
+        // let applicant1 = await insertDefaultApplicant(app,"Mohd Ali Bin Maskur","800101014333","-","Taman Molek, JB","details")
 
-        let applicant1 = await insertDefaultApplicant(app,"Mohd Ali Bin Maskur","800101014333","-","Taman Molek, JB","details")
+        let addcert1 = await insertAdditionalCert(app,"T-BOISIET")
+        let addcert2 = await insertAdditionalCert(app,"Authorized Entrant and Standby Person (AESP) Certificate")
+        let addcert3 = await insertAdditionalCert(app,"Oil and Gas Safety Passport (OGSP) Certificate")
+        let addcert4 = await insertAdditionalCert(app,"CIDB green card")
+        let addcert5 = await insertAdditionalCert(app,"Medical")
+
+        let cert1 = await insertTradeCertLinked(app,"Blaster Painter", "Blasting & Painting Certificate")
+        let cert2 = await insertTradeCertLinked(app,"Driver", "Driving License")
+        let cert3 = await insertTradeCertLinked(app,"Electrician", "Electrician Certificate")
+        let cert4 = await insertTradeCertLinked(app,"Fire Watcher", "Fire Watcher Safety Certificate")
+        let cert5 = await insertTradeCertLinked(app,"General Worker", null)
+        let cert6 = await insertTradeCertLinked(app,"GRE Bonder", "GRE/FRP Bonders Certificate")
+        let cert7 = await insertTradeCertLinked(app,"Helper", null)
+        let cert8 = await insertTradeCertLinked(app,"Instrument Technician", "Instrumentation Certificate")
+        let cert9 = await insertTradeCertLinked(app,"Material Coordinator", null)
+        let cert10 = await insertTradeCertLinked(app,"Mechanical Fitter", "Mechanical Fitter Certificate")
+        let cert11 = await insertTradeCertLinked(app,"Pipe Fitter", "Pipe Fitter Certificate")
+        let cert12 = await insertTradeCertLinked(app,"PTW Coordinator", null)
+        let cert13 = await insertTradeCertLinked(app,"QA/QC", "Welding Inspector Certificate")
+        let cert14 = await insertTradeCertLinked(app,"Rigger", "Rigging & Slinging Certificate")
+        let cert15 = await insertTradeCertLinked(app,"Safety Supervisor", "Site Safety Supervisor (SSS) Certificate")
+        let cert16 = await insertTradeCertLinked(app,"Scaffolder", "Scaffolding Certificate")
+        let cert17 = await insertTradeCertLinked(app,"Scaffolding Inspector", "Scaffolding Inspector Certificate")
+        let cert18 = await insertTradeCertLinked(app,"Welder", "Welding Certificate")
+
+        let service1 = await insertTypeServices(app,"Marine")
+        let service2 = await insertTypeServices(app,"Offshore")
+        let service3 = await insertTypeServices(app,"Supply")
+        
+        let issue1 = await insertIssueType(app,"HSE")
+        let issue2 = await insertIssueType(app,"Equipment")
+        let issue3 = await insertIssueType(app,"Quality")
+        let issue4 = await insertIssueType(app,"Material")
+        let issue5 = await insertIssueType(app,"Others")
+
+        let trade1 = await insertTrades(app,"Blaster Painter")
+        let trade2 = await insertTrades(app,"Driver")
+        let trade3 = await insertTrades(app,"Electrician")
+        let trade4 = await insertTrades(app,"Fire Watcher")
+        let trade5 = await insertTrades(app,"General Worker")
+        let trade6 = await insertTrades(app,"GRE Bonder")
+        let trade7 = await insertTrades(app,"Helper")
+        let trade8 = await insertTrades(app,"Instrument Technician")
+        let trade9 = await insertTrades(app,"Material Coordinator")
+        let trade10 = await insertTrades(app,"Mechanical Fitter")
+        let trade11 = await insertTrades(app,"Pipe Fitter")
+        let trade12 = await insertTrades(app,"PTW Coordinator")
+        let trade13 = await insertTrades(app,"QA/QC")
+        let trade14 = await insertTrades(app,"Rigger")
+        let trade15 = await insertTrades(app,"Safety Supervisor")
+        let trade16 = await insertTrades(app,"Scaffolder")
+        let trade17 = await insertTrades(app,"Scaffolding Inspector")
+        let trade18 = await insertTrades(app,"Welder")
 
         console.log("Creating user 1 ...");
         let user1 = await insertDefaultFBUser(app,"applicant1","applicant1@system.com","1234567");
