@@ -154,6 +154,18 @@ function insertIssueType(app,name){
     })
 }
 
+function insertLogType(app,name){
+    var LogType = app.models.LogType;
+    return new Promise((resolve,reject)=>{
+        LogType.create({
+            'name':name
+        },(err,res)=>{
+            if(err){return reject(err)}
+            resolve(res)
+        })
+    })
+}
+
 function insertTrades(app,trade_name){
     var Trades = app.models.Trades;
     return new Promise((resolve,reject)=>{
@@ -228,11 +240,16 @@ async function migrate(){
         let service2 = await insertTypeServices(app,"Offshore")
         let service3 = await insertTypeServices(app,"Supply")
         
-        let issue1 = await insertIssueType(app,"HSE")
+        let issue1 = await insertIssueType(app,"Crew")
         let issue2 = await insertIssueType(app,"Equipment")
         let issue3 = await insertIssueType(app,"Quality")
         let issue4 = await insertIssueType(app,"Material")
         let issue5 = await insertIssueType(app,"Others")
+
+        let log1 = await insertLogType(app,"HSE")
+        let log2 = await insertLogType(app,"Subcontrator")
+        let log3 = await insertLogType(app,"Equipment")
+        let log4 = await insertLogType(app,"Material")
 
         let trade1 = await insertTrades(app,"Blaster Painter")
         let trade2 = await insertTrades(app,"Driver")
