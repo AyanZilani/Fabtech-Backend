@@ -240,14 +240,14 @@ async function migrate(){
         let service2 = await insertTypeServices(app,"Offshore")
         let service3 = await insertTypeServices(app,"Supply")
         
-        let issue1 = await insertIssueType(app,"Crew")
+        let issue1 = await insertIssueType(app,"HSE")
         let issue2 = await insertIssueType(app,"Equipment")
         let issue3 = await insertIssueType(app,"Quality")
         let issue4 = await insertIssueType(app,"Material")
         let issue5 = await insertIssueType(app,"Others")
 
-        let log1 = await insertLogType(app,"HSE")
-        let log2 = await insertLogType(app,"Subcontrator")
+        let log1 = await insertLogType(app,"Crew")
+        let log2 = await insertLogType(app,"Subcontractor")
         let log3 = await insertLogType(app,"Equipment")
         let log4 = await insertLogType(app,"Material")
 
