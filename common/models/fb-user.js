@@ -226,6 +226,7 @@ async function _registerSystemuser(app, req, cb){
             username: req.body.username,
             password: req.body.password,
             email: req.body.email,
+            title: req.body.title
         })
 
         // Create Role Mapping
