@@ -22,7 +22,7 @@
       "type": "boolean"
     },
     "normal_wh": {
-      "type": "string"
+      "type": "number"
     },
     "ot_wh": {
       "type": "string"
