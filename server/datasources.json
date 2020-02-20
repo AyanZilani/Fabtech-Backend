@@ -7,10 +7,10 @@
     "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "fabtech",
-    "password": "Dg63Nj9DmIPi5v1S",
+    "database": "fabtec",
+    "password": "4EIpEUQdw0OpXn2E",
     "name": "mysql",
-    "user": "fabtech",
+    "user": "fabtec",
     "connector": "mysql",
     "maxOfflineRequests": 200
   },
