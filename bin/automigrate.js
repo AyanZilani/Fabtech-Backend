@@ -235,6 +235,12 @@ async function migrate(){
         let cert16 = await insertTradeCertLinked(app,"Scaffolder", "Scaffolding Certificate")
         let cert17 = await insertTradeCertLinked(app,"Scaffolding Inspector", "Scaffolding Inspector Certificate")
         let cert18 = await insertTradeCertLinked(app,"Welder", "Welding Certificate")
+        let cert19 = await insertTradeCertLinked(app,"Foreman", null)
+        let cert20 = await insertTradeCertLinked(app,"Marker", null)
+        let cert21 = await insertTradeCertLinked(app,"Grinder", null)
+        let cert22 = await insertTradeCertLinked(app,"Quality Controller", null)
+        let cert23 = await insertTradeCertLinked(app,"Safety Promoter", null)
+        let cert24 = await insertTradeCertLinked(app,"Semi Skill", null)
 
         let service1 = await insertTypeServices(app,"Marine")
         let service2 = await insertTypeServices(app,"Offshore")
@@ -269,6 +275,12 @@ async function migrate(){
         let trade16 = await insertTrades(app,"Scaffolder")
         let trade17 = await insertTrades(app,"Scaffolding Inspector")
         let trade18 = await insertTrades(app,"Welder")
+        let trade19 = await insertTrades(app,"Foreman")
+        let trade20 = await insertTrades(app,"Marker")
+        let trade21 = await insertTrades(app,"Grinder")
+        let trade22 = await insertTrades(app,"Quality Controller")
+        let trade23 = await insertTrades(app,"Safety Promoter")
+        let trade24 = await insertTrades(app,"Semi Skill")
 
         console.log("Creating user 1 ...");
         let user1 = await insertDefaultFBUser(app,"applicant1","applicant1@system.com","1234567");
