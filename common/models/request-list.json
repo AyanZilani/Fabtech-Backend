@@ -35,6 +35,9 @@
     },
     "request_pic": {
       "type": "string"
+    },
+    "isImpactAC": {
+      "type": "boolean"
     }
   },
   "validations": [],

@@ -22,10 +22,12 @@
       "type": "boolean"
     },
     "normal_wh": {
-      "type": "number"
+      "type": "number",
+      "dataType": "float"
     },
     "ot_wh": {
-      "type": "string"
+      "type": "number",
+      "dataType": "float"
     },
     "date": {
       "type": "string"

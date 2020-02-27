@@ -256,6 +256,7 @@ async function migrate(){
         let log2 = await insertLogType(app,"Subcontractor")
         let log3 = await insertLogType(app,"Equipment")
         let log4 = await insertLogType(app,"Material")
+        let log5 = await insertLogType(app,"Others")
 
         let trade1 = await insertTrades(app,"Blaster Painter")
         let trade2 = await insertTrades(app,"Driver")
