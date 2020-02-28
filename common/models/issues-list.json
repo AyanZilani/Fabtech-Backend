@@ -33,6 +33,9 @@
     "isImpactAWO": {
       "type": "boolean"
     },
+    "isImpactAC": {
+      "type": "boolean"
+    },
     "modified_datetime": {
       "type": "string"
     }

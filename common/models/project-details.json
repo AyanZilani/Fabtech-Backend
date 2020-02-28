@@ -51,6 +51,11 @@
       "type": "belongsTo",
       "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
+    },
+    "issuelist": {
+      "type": "belongsTo",
+      "model": "IssuesList",
+      "foreignKey": "issuelist_id"
     }
   },
   "acls": [],
