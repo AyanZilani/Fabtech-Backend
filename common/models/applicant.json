@@ -12,7 +12,7 @@
     },
     "icno": {
       "type": "string",
-      "length": 50
+      "length": 12
     },
     "passportno": {
       "type": "string",
