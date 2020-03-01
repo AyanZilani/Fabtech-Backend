@@ -178,5 +178,13 @@
   "InternalMessage": {
     "dataSource": "mysql",
     "public": true
+  },
+  "RequestAttachment": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "LogAttachment": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

@@ -32,7 +32,6 @@
     "date": {
       "type": "string"
     }
-    
   },
   "validations": [],
   "relations": {

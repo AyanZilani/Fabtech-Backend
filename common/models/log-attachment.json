@@ -1,0 +1,23 @@
+{
+  "name": "LogAttachment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "dailylogreport": {
+      "type": "belongsTo",
+      "model": "DailyLogReport",
+      "foreignKey": "log_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
