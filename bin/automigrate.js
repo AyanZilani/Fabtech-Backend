@@ -42,7 +42,9 @@ var modelList = [
     'LogType',
     'IssueType',
     'IssuesList',
-    'InternalMessage'
+    'InternalMessage',
+    'RequestAttachment',
+    'LogAttachment'
     
 ];
 
@@ -221,26 +223,26 @@ async function migrate(){
         let cert2 = await insertTradeCertLinked(app,"Driver", "Driving License")
         let cert3 = await insertTradeCertLinked(app,"Electrician", "Electrician Certificate")
         let cert4 = await insertTradeCertLinked(app,"Fire Watcher", "Fire Watcher Safety Certificate")
-        let cert5 = await insertTradeCertLinked(app,"General Worker", null)
+        let cert5 = await insertTradeCertLinked(app,"General Worker", "-No Certificate Needed-")
         let cert6 = await insertTradeCertLinked(app,"GRE Bonder", "GRE/FRP Bonders Certificate")
-        let cert7 = await insertTradeCertLinked(app,"Helper", null)
+        let cert7 = await insertTradeCertLinked(app,"Helper", "-No Certificate Needed-")
         let cert8 = await insertTradeCertLinked(app,"Instrument Technician", "Instrumentation Certificate")
-        let cert9 = await insertTradeCertLinked(app,"Material Coordinator", null)
+        let cert9 = await insertTradeCertLinked(app,"Material Coordinator", "-No Certificate Needed-")
         let cert10 = await insertTradeCertLinked(app,"Mechanical Fitter", "Mechanical Fitter Certificate")
         let cert11 = await insertTradeCertLinked(app,"Pipe Fitter", "Pipe Fitter Certificate")
-        let cert12 = await insertTradeCertLinked(app,"PTW Coordinator", null)
+        let cert12 = await insertTradeCertLinked(app,"PTW Coordinator", "-No Certificate Needed-")
         let cert13 = await insertTradeCertLinked(app,"QA/QC", "Welding Inspector Certificate")
         let cert14 = await insertTradeCertLinked(app,"Rigger", "Rigging & Slinging Certificate")
         let cert15 = await insertTradeCertLinked(app,"Safety Supervisor", "Site Safety Supervisor (SSS) Certificate")
         let cert16 = await insertTradeCertLinked(app,"Scaffolder", "Scaffolding Certificate")
         let cert17 = await insertTradeCertLinked(app,"Scaffolding Inspector", "Scaffolding Inspector Certificate")
         let cert18 = await insertTradeCertLinked(app,"Welder", "Welding Certificate")
-        let cert19 = await insertTradeCertLinked(app,"Foreman", null)
-        let cert20 = await insertTradeCertLinked(app,"Marker", null)
-        let cert21 = await insertTradeCertLinked(app,"Grinder", null)
-        let cert22 = await insertTradeCertLinked(app,"Quality Controller", null)
-        let cert23 = await insertTradeCertLinked(app,"Safety Promoter", null)
-        let cert24 = await insertTradeCertLinked(app,"Semi Skill", null)
+        let cert19 = await insertTradeCertLinked(app,"Foreman", "-No Certificate Needed-")
+        let cert20 = await insertTradeCertLinked(app,"Marker", "-No Certificate Needed-")
+        let cert21 = await insertTradeCertLinked(app,"Grinder", "-No Certificate Needed-")
+        let cert22 = await insertTradeCertLinked(app,"Quality Controller", "-No Certificate Needed-")
+        let cert23 = await insertTradeCertLinked(app,"Safety Promoter", "-No Certificate Needed-")
+        let cert24 = await insertTradeCertLinked(app,"Semi Skill", "-No Certificate Needed-")
 
         let service1 = await insertTypeServices(app,"Marine")
         let service2 = await insertTypeServices(app,"Offshore")

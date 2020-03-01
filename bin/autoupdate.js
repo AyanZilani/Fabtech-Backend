@@ -41,7 +41,9 @@ var modelList = [
     'LogType',
     'IssueType',
     'IssuesList',
-    'InternalMessage'
+    'InternalMessage',
+    'RequestAttachment',
+    'LogAttachment'
 ];
 
 

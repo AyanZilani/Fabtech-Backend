@@ -38,6 +38,11 @@
       "type": "belongsTo",
       "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
+    },
+    "logattachment": {
+      "type": "hasMany",
+      "model": "LogAttachment",
+      "foreignKey": "log_id"
     }
   },
   "acls": [],
