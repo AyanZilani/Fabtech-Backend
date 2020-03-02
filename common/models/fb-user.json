@@ -35,7 +35,8 @@
       "property": [
         "register_applicant",
         "response_fb",
-        "list_systemuser"
+        "list_systemuser",
+        "reset_password"
       ]
     }
   ],

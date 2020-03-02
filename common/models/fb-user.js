@@ -140,6 +140,47 @@ module.exports = function(FbUser) {
         http: { path: '/verify/facebook', verb: 'post' }
     })
 
+    FbUser.reset_password = function(data, cb){
+        if(typeof(data.email)==='undefined'){
+            return cb({statusCode: 400, message: 'missing email'})
+        }
+        if(typeof(data.password)==='undefined'){
+            return cb({statusCode: 400, message: 'missing password'})
+        }
+
+        FbUser.findOne({where: {email: data.email}}, (err, result)=>{
+            if(err){
+                return cb({statusCode: 400, message: err})
+            }
+
+            if(typeof(result)==='undefined'){
+                return cb({statusCode: 400, message: 'email not found'})
+            }
+            if(result === null){
+                return cb({statusCode: 400, message: 'email not found'})
+            }
+
+            FbUser.setPassword(result.id, data.password, (err1, result1)=>{
+                if(err1){
+                    return cb({statusCode: 400, message: err1})
+                }
+                cb(null, {result: 'OK'})
+            })
+        })
+    }
+
+    FbUser.remoteMethod('reset_password', {
+        description: 'Reset Password',
+        isStatic: true,
+        accepts: [{arg: 'data', type: 'object', http:{source: 'body'}}],
+        returns: {
+            type: 'object',
+            root: true
+        },
+        http: {path: '/reset/password', verb: 'post'}
+    })
+
+
 };
 
 
