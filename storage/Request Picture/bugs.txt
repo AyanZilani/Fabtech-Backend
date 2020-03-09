@@ -1,0 +1,36 @@
+1. Timesheet --> should be cannot delete the previous attendance
+2. Timesheet --> 
+3. Assign Project --> buang fx dekat assign worker punya nama
+4. Assign Project --> buang button kat bawah sekali
+
+
+
+
+
+
+let selectedOption = e.target
+  this.setState(
+    { selectedOptionValue: selectedOption.value },
+    () => GetQuery(SERVER.API.Applicant.GetTradeCertLinked, {certificate_name: this.state.selectedOptionValue}).then(restrades => {
+      
+      this.setState({
+      selectedOptionLabel: restrades[0].trade_name
+    })
+    })  
+    )
+
+
+
+1) ProjectList not reload when add new project
+2) Page list application (OD) sorting not function //
+3) Page change order (SV) sorting not function //
+4) page issue list (SV) sorting not function //
+
+
+
+VTG system
+
+1) dev 2 - 3k
+2) designer - 800
+
+

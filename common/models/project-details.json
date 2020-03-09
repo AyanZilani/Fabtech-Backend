@@ -56,6 +56,11 @@
       "type": "belongsTo",
       "model": "IssuesList",
       "foreignKey": "issuelist_id"
+    },
+    "projectdetails": {
+      "type": "hasMany",
+      "model": "DetailAttachment",
+      "foreignKey": "detail_id"
     }
   },
   "acls": [],

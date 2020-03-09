@@ -43,7 +43,8 @@ var modelList = [
     'IssuesList',
     'InternalMessage',
     'RequestAttachment',
-    'LogAttachment'
+    'LogAttachment',
+    'DetailAttachment',
 ];
 
 
