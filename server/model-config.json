@@ -186,5 +186,9 @@
   "LogAttachment": {
     "dataSource": "mysql",
     "public": true
+  },
+  "DetailAttachment": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

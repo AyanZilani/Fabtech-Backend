@@ -38,6 +38,9 @@
     },
     "isImpactAC": {
       "type": "boolean"
+    },
+    "co_status": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -51,6 +54,11 @@
       "type": "belongsTo",
       "model": "SiteSvEngineer",
       "foreignKey": "sv_eng_id"
+    },
+    "requestlist": {
+      "type": "hasMany",
+      "model": "RequestList",
+      "foreignKey": "request_id"
     }
   },
   "acls": [],

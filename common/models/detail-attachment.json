@@ -1,0 +1,33 @@
+{
+  "name": "DetailAttachment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "projectdetails": {
+      "type": "belongsTo",
+      "model": "ProjectDetails",
+      "foreignKey": "detail_id"
+    },
+    "requestlist": {
+      "type": "belongsTo",
+      "model": "RequestList",
+      "foreignKey": "request_id"
+    },
+    "issueslist": {
+      "type": "belongsTo",
+      "model": "IssuesList",
+      "foreignKey": "issue_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
