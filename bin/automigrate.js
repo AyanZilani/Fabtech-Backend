@@ -60,6 +60,7 @@ function createTables(ds,tables){
         })
     })
 }
+
 function createRole(app,role){
     var Role = app.models.Role;
     return new Promise((resolve,reject)=>{
@@ -69,6 +70,7 @@ function createRole(app,role){
         });
     })
 }
+
 function createRoleMap(role,FBUser){
     return new Promise((resolve,reject)=>{
         role.principals.create({"principalType":"User","principalId":FBUser.id},(err,res)=>{
