@@ -45,6 +45,7 @@ var modelList = [
     'RequestAttachment',
     'LogAttachment',
     'DetailAttachment',
+    'Safety'
 ];
 
 
