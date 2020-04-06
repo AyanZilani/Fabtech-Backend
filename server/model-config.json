@@ -190,5 +190,9 @@
   "DetailAttachment": {
     "dataSource": "mysql",
     "public": true
+  },
+  "Safety": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
